@@ -4,7 +4,8 @@
         
         <title>Template</title>
         <meta charset="utf-8">
-        
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css" type="text/css">
     
     
@@ -15,22 +16,29 @@
         <div class='main'>
             <div class='main__playersPanel'>
                 <div class='main__playersPanel__playerNames'>
-                    <div class='main__playersPanel__playerNames__player1'></div>
-                    <div class='main__playersPanel__playerNames__player2'></div>
+                    <div class='main__playersPanel__playerNames__player1'>player</div>
+                    <div class='main__playersPanel__playerNames__player2'>monster</div>
                 </div>
+                
                 <div class='main__playersPanel__health'>
-                    <div class='main__playersPanel__health__player1'></div>
-                    <div class='main__playersPanel__health__player2'></div>
+                    <div class='main__playersPanel__health__player1'>
+                        <div class='healthBox'></div>
+                    </div>
+                    <div class='main__playersPanel__health__player2'>
+                            <div class='healthBox'></div>
+                    </div>
                 </div>
             </div>
             <div class='main__StartButton'>
                 <button class='startButton'>Start</button>
             </div>
             <div class='main__actionButtons'>
-                    <button class='attackButton'>Start</button>
-                    <button class='specialAttackButton'>Start</button>
-                    <button class='healButton'>Start</button>
-                    <button class='giveUpButton'>Start</button>
+                <div class='main__actionButtons__wrap'>
+                    <button class='attackButton'>Attack</button>
+                    <button class='specialAttackButton'>Special Attack</button>
+                    <button class='healButton'>heal</button>
+                    <button class='giveUpButton'>give up</button>
+                 </div>
             </div>
             <div class='main__log'>
                 <ul>
