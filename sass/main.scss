@@ -1,0 +1,159 @@
+
+$lightGrey: #777;
+$green: green;
+$white: white;
+
+@mixin clearfix {
+    &::after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin playerNameStyling{
+            float: left;
+            width: 50%;
+            height: 100%;
+            border: 1px solid red;
+            text-align: center;
+            padding-top: 0px;
+            text-transform: uppercase;
+            font-size: 25px;
+}
+
+@mixin centre{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin buttonContainer{
+    width: 100%;
+    height: 80px;
+    border: 1px solid yellow;
+    margin: 50px 0 0 0;
+    position: relative;
+}
+@mixin buttonStyle($color){
+    width: 150px;
+    height: 50px;
+    font-size: inherit;
+    background-color: $green;
+    color: $color;
+    text-transform: uppercase;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Lato', sans-serif;        /* font z Google Fonts */
+    font-weight: 400;
+    font-size: 16px;
+    color: $lightGrey;
+    line-height: 1.7;
+}
+.main{
+    width: 1000px;
+    border: 1px solid black;
+    @include centre;
+    top:10%;
+    transform: translateX(-50%);
+}
+
+.main__playersPanel{
+    height: 100px;
+    border: 1px solid black;
+
+    &__playerNames{
+        width: 100%;
+        height: 50%;
+        border: 1px solid red;
+    
+        @include clearfix;
+
+        &__player1{
+            @include playerNameStyling;
+        }
+        &__player2{
+            @include playerNameStyling;
+        }
+    }
+    &__health{
+        width: 100%;
+        height: 50%;
+        border: 1px solid blue;
+
+        @include clearfix;
+
+        &__player1{
+            float: left;
+            width: 50%;
+            height: 100%;
+            border: 1px solid blue;
+            position: relative;
+        }
+        &__player2{
+            float: left;
+            width: 50%;
+            height: 100%;
+            border: 1px solid blue;
+            position: relative;
+        }
+    }
+}
+.healthBox{
+    width: 50%;
+    height: 50%;
+    @include centre;
+    border: 1px solid $green;
+    background-color: $lightGrey;
+
+    &::after{
+        content: '';
+        display: inline-block;
+        width: 80%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        transition: all 1s;
+        background-color: $green;
+    }
+}
+
+.main__StartButton{
+    @include buttonContainer;
+}
+.startButton{
+    @include centre;
+    @include buttonStyle($white);
+}
+.main__actionButtons{
+    @include buttonContainer;
+    position: relative;
+
+    &__wrap{
+        height: 50px;
+        width: 615px;
+        @include centre;
+    }
+}
+.attackButton, .specialAttackButton, .healButton, .giveUpButton{
+    @include buttonStyle($white)
+}
+
+.main__log{
+    height: 100px;
+    width: 100%;
+    margin: 50px 0 0 0;
+    border: 1px solid blue;
+}
