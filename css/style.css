@@ -11,26 +11,24 @@ body {
   /* font z Google Fonts */
   font-weight: 400;
   font-size: 16px;
-  color: #777;
-  line-height: 1.7; }
+  color: #bbb;
+  line-height: 1.7;
+  background-image: url("../img/memphis-colorful.png"); }
 
 .main {
   width: 1000px;
-  border: 1px solid black;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  top: 10%;
+  top: 7%;
   transform: translateX(-50%); }
 
 .main__playersPanel {
-  height: 100px;
-  border: 1px solid black; }
+  height: 150px; }
   .main__playersPanel__playerNames {
     width: 100%;
-    height: 50%;
-    border: 1px solid red; }
+    height: 50%; }
     .main__playersPanel__playerNames::after {
       content: '';
       display: table;
@@ -39,24 +37,25 @@ body {
       float: left;
       width: 50%;
       height: 100%;
-      border: 1px solid red;
       text-align: center;
       padding-top: 0px;
       text-transform: uppercase;
-      font-size: 25px; }
+      font-size: 35px;
+      font-weight: bold;
+      color: #000; }
     .main__playersPanel__playerNames__player2 {
       float: left;
       width: 50%;
       height: 100%;
-      border: 1px solid red;
       text-align: center;
       padding-top: 0px;
       text-transform: uppercase;
-      font-size: 25px; }
+      font-size: 35px;
+      font-weight: bold;
+      color: #000; }
   .main__playersPanel__health {
     width: 100%;
-    height: 50%;
-    border: 1px solid blue; }
+    height: 50%; }
     .main__playersPanel__health::after {
       content: '';
       display: table;
@@ -65,24 +64,21 @@ body {
       float: left;
       width: 50%;
       height: 100%;
-      border: 1px solid blue;
       position: relative; }
     .main__playersPanel__health__player2 {
       float: left;
       width: 50%;
       height: 100%;
-      border: 1px solid blue;
       position: relative; }
 
 .healthBox {
-  width: 50%;
-  height: 50%;
+  width: 75%;
+  height: 70%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid green;
-  background-color: #777; }
+  background-color: #bbedce; }
   .healthBox::after {
     content: '';
     display: inline-block;
@@ -93,14 +89,16 @@ body {
     left: 0;
     z-index: 10;
     transition: all 1s;
-    background-color: green; }
+    background-color: #0d9340; }
 
 .main__StartButton {
   width: 100%;
-  height: 80px;
-  border: 1px solid yellow;
+  height: 100px;
+  border: 1px solid #ddd;
   margin: 50px 0 0 0;
-  position: relative; }
+  position: relative;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.8); }
 
 .startButton {
   position: absolute;
@@ -110,20 +108,48 @@ body {
   width: 150px;
   height: 50px;
   font-size: inherit;
-  background-color: green;
+  background-color: #3bdb78;
   color: white;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.startButton:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, -45%);
+  transition: all 0.15s; }
+
+.startButton:focus, .attackButton:focus, .specialAttackButton:focus, .healButton:focus, .giveUpButton:focus {
+  outline: none; }
+
+.startButton::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #3bdb78;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s; }
+
+.startButton:hover::after {
+  transform: scale(1.3);
+  opacity: 0; }
 
 .main__actionButtons {
   width: 100%;
-  height: 80px;
-  border: 1px solid yellow;
+  height: 100px;
+  border: 1px solid #ddd;
   margin: 50px 0 0 0;
   position: relative;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.8);
   position: relative; }
   .main__actionButtons__wrap {
-    height: 50px;
-    width: 615px;
+    height: 52px;
+    min-width: 64.5%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -133,12 +159,45 @@ body {
   width: 150px;
   height: 50px;
   font-size: inherit;
-  background-color: green;
+  background-color: #3bdb78;
   color: white;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.attackButton {
+  background-color: red; }
+  .attackButton:hover {
+    background-color: #cc0000; }
+
+.specialAttackButton {
+  background-color: #4286f4; }
+  .specialAttackButton:hover {
+    background-color: #1267f1; }
+
+.healButton {
+  background-color: #a041f4; }
+  .healButton:hover {
+    background-color: #8811f1; }
+
+.giveUpButton {
+  background-color: #db783b; }
+  .giveUpButton:hover {
+    background-color: #c05f23; }
+
+.attackButton:active, .specialAttackButton:active, .healButton:active, .giveUpButton:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: translateY(5%);
+  transition: all 0.15s; }
+
+.button:not(:last-child) {
+  margin-right: 10px; }
 
 .main__log {
-  height: 100px;
   width: 100%;
+  height: 100px;
+  border: 1px solid #ddd;
   margin: 50px 0 0 0;
-  border: 1px solid blue; }
+  position: relative;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 60px; }
