@@ -1,0 +1,3 @@
+@function darker($color){
+    @return darken($color, 10%);
+}

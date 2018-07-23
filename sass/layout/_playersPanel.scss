@@ -1,0 +1,40 @@
+.main__playersPanel{
+    height: 15rem;
+
+
+    &__playerNames{
+        width: 100%;
+        height: 50%;
+
+    
+        @include clearfix;
+
+        &__player1{
+            @include playerNameStyling;
+        }
+        &__player2{
+            @include playerNameStyling;
+        }
+    }
+    &__health{
+        width: 100%;
+        height: 50%;
+
+
+        @include clearfix;
+
+        &__player1{
+            float: left;
+            width: 50%;
+            height: 100%;
+            position: relative;
+        }
+        &__player2{
+            float: left;
+            width: 50%;
+            height: 100%;
+
+            position: relative;
+        }
+    }
+}

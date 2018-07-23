@@ -1,0 +1,54 @@
+.attackButton:focus, .specialAttackButton:focus,.healButton:focus, .giveUpButton:focus{
+    @include clickShadowEffect_focus;
+}
+
+.main__actionButtons{
+    @include buttonContainer;
+    position: relative;
+
+    &__wrap{
+        height: 5.2rem;
+        min-width: 64.5%;
+        @include centre;
+    }
+
+}
+ .attackButton, .specialAttackButton, .healButton, .giveUpButton{
+    @include buttonStyle($white);
+}
+
+.attackButton{
+    background-color: $red;
+    &:hover{
+        background-color:  darker($red);
+     
+     }
+}
+.specialAttackButton{
+    background-color: $blue;
+    &:hover{
+        background-color:  darker($blue);
+     
+     }
+}
+.healButton{
+    background-color: $purple;
+    &:hover{
+        background-color:  darker($purple);
+     }
+}
+.giveUpButton{
+    background-color: $orange;
+    &:hover{
+        background-color:  darker($orange);
+     
+     }
+}
+.attackButton:active, .specialAttackButton:active,.healButton:active, .giveUpButton:active{
+    @include clickShadowEffect_active;
+
+}
+
+.button:not(:last-child){
+    margin-right: 1rem;
+}

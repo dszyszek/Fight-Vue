@@ -1,0 +1,14 @@
+body{
+    font-family: 'Lato', sans-serif;        /* font from Google Fonts */
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: $grey1;
+    line-height: 1.7;
+
+}
+.main{
+    width: 100rem;
+    @include centre;
+    top: 7%;
+    transform: translateX(-50%);
+}
