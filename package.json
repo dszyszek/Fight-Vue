@@ -1,0 +1,15 @@
+{
+  "name": "monsterslayer",
+  "version": "1.0.0",
+  "description": "monsterSlayer game",
+  "main": "script.js",
+  "dependencies": {},
+  "devDependencies": {
+        "node-sass": "^4.9.2"
+  },
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Damian Szyszka",
+  "license": "ISC"
+}
