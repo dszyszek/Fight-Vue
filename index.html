@@ -38,10 +38,10 @@
             </div>
             <div class='main__actionButtons' v-show='isActive'  :class='{fadeInAnimation: isActive}'>
                 <div class='main__actionButtons__wrap'>
-                    <button class='attackButton button' @click='logActive = true'>Attack</button>
-                    <button class='specialAttackButton button'>Special Attack</button>
-                    <button class='healButton button'>heal</button>
-                    <button class='giveUpButton button'>give up</button>
+                    <button class='attackButton button' @click='attack(2,5,"monster"), attack(3,7,"player")'>Attack</button>
+                    <button class='specialAttackButton button' @click='attack(5,8,"monster"), attack(3,7,"player")'>Special Attack</button>
+                    <button class='healButton button' @click='heal()'>heal</button>
+                    <button class='giveUpButton button' @click='giveUp()'>give up</button>
                  </div>
             </div>
             <div class='main__log' v-show='logActive' :class='{fadeInAnimation: logActive}'>
