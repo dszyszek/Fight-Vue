@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </div>
-            <div class='main__StartButton' v-show='!isActive'>
+            <div class='main__StartButton' v-show='!isActive' :class='{fadeInAnimation: !isActive}'>
                 <button class='startButton' @click='startGame()'>Start</button>
             </div>
             <div class='main__actionButtons' v-show='isActive'  :class='{fadeInAnimation: isActive}'>
@@ -45,8 +45,9 @@
                  </div>
             </div>
             <div class='main__log' v-show='logActive' :class='{fadeInAnimation: logActive}'>
-                <ul>
-
+                <ul v-for='content in logInfo'>
+                    <li v-if='content.split(" ").includes("monster")' :style='{boxShadow: "0 -0.4rem 4rem -1.5rem #ff632b inset" ,color: "#ff632b"}'>{{content}}</li>
+                    <li v-else-if='content.split(" ").includes("player")' :style='{boxShadow: "0 -0.4rem 4rem -1.5rem #4993e5 inset" ,color: "#4993e5"}'>{{content}} </li>
                 </ul>
             </div>
         </div>
