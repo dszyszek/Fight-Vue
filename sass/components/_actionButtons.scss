@@ -4,6 +4,7 @@
 
 .main__actionButtons{
     @include buttonContainer;
+    height: 10rem;
     position: relative;
 
     &__wrap{

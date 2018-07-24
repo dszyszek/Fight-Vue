@@ -6,24 +6,14 @@
 html {
   font-size: 62.5%; }
 
-@keyframes fadeOut {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
-
 @keyframes fadeIn {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
 
-.fadeOutAnimation {
-  transition: all 0.5s;
-  opacity: 0; }
-
 .fadeInAnimation {
-  animation: fadeIn 1s; }
+  animation: fadeIn 0.7s; }
 
 body {
   background-image: url("../img/memphis-colorful.png"); }
@@ -118,12 +108,12 @@ body {
 
 .main__StartButton {
   width: 100%;
-  height: 10rem;
   border: 0.1rem solid #ddd;
   margin: 5rem 0 0 0;
   position: relative;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.8); }
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 10rem; }
 
 .startButton {
   position: absolute;
@@ -135,6 +125,7 @@ body {
   font-size: inherit;
   background-color: #3bdb78;
   color: white;
+  cursor: pointer;
   text-transform: uppercase;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -154,7 +145,7 @@ body {
     z-index: -1;
     transition: all 0.4s; }
   .startButton:hover::after {
-    transform: scale(1.3);
+    transform: scale(1.5);
     opacity: 0; }
   .startButton:focus {
     outline: none; }
@@ -164,12 +155,12 @@ body {
 
 .main__actionButtons {
   width: 100%;
-  height: 10rem;
   border: 0.1rem solid #ddd;
   margin: 5rem 0 0 0;
   position: relative;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 0.8);
+  height: 10rem;
   position: relative; }
   .main__actionButtons__wrap {
     height: 5.2rem;
@@ -185,6 +176,7 @@ body {
   font-size: inherit;
   background-color: #3bdb78;
   color: white;
+  cursor: pointer;
   text-transform: uppercase;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
@@ -218,10 +210,18 @@ body {
 
 .main__log {
   width: 100%;
-  height: 10rem;
   border: 0.1rem solid #ddd;
   margin: 5rem 0 0 0;
   position: relative;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 0.8);
-  height: 6rem; }
+  box-sizing: content-box;
+  min-height: 6rem;
+  max-height: 20rem;
+  overflow: scroll;
+  opacity: 0.9; }
+  .main__log li {
+    list-style-type: none;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto; }

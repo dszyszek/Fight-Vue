@@ -1,5 +1,6 @@
 .main__StartButton{
     @include buttonContainer;
+    height: 10rem;
 }
 
 .startButton{
@@ -27,7 +28,7 @@
     }
 
     &:hover::after{
-        transform: scale(1.3);
+        transform: scale(1.5);
         opacity: 0;
     }
 

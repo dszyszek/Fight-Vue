@@ -1,4 +1,16 @@
 .main__log{
     @include buttonContainer;
-    height: 6rem;
+    box-sizing: content-box;
+    min-height: 6rem;
+    max-height: 20rem;
+    overflow: scroll;
+    opacity: 0.9;
+
+    li{
+        list-style-type: none;
+       // border: 1px solid black;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+    }
 }

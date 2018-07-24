@@ -27,7 +27,6 @@
 
 @mixin buttonContainer{
     width: 100%;
-    height: 10rem;
     border: 0.1rem solid $grey2;
     margin: 5rem 0 0 0;
     position: relative;
@@ -40,6 +39,7 @@
     font-size: inherit;
     background-color: $green;
     color: $color;
+    cursor: pointer;
     text-transform: uppercase;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
