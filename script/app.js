@@ -15,9 +15,10 @@ new Vue({
         },
         attack: function(minAtt, maxAtt, who){
                 if(this.monsterHealth <= 0 || this.playerHealth <= 0){this.isActive = false;
+                    this.logActive = false;
+                    this.logInfo = [];
                      return}
                 let damage = Math.max(Math.floor(Math.random()*maxAtt),minAtt);
-                console.log('here');
                 if(who == 'monster'){ this.monsterHealth = Math.max((this.monsterHealth-damage),0)}
                 else if(who == 'player'){this.playerHealth = Math.max((this.playerHealth-damage),0)};
                 this.logNotifications(`${who} was attacked with ${damage}`);
